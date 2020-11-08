@@ -1,0 +1,128 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.02em;
+}
+
+.anime {
+    transition: 0.4s ease;
+}
+
+.color-opacity {
+    opacity: var(--opacity);
+    color: var(--title_color);
+    filter: var(--filter);
+}
+
+.center {
+    /* center on screen */
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.right-icon {
+    float: right;
+    position: relative;
+}
+
+.icon-style {
+    fill: var(--title_color);
+    opacity: var(--opacity);
+    width: 24px;
+    height: 24px;
+    padding: 0.75em;
+}
+
+body {
+    padding: 4vw;
+    max-width: 800px;
+    margin: auto;
+    color: var(--text_color);
+    background: var(--bg);
+    /* custom property */
+    --title_color: #666;
+    --choice-el_bg: #666;
+    --bg: #666;
+    --text_color: #aaa;
+    --opacity: 0;
+    --filter: alpha(opacity=1);
+    transition: 0.4s;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc, #ddd, #ccc);
+    background: var(--title_color);
+}
+
+#book_hint {
+    top: 30%;
+    font-size: 2.3em;
+    font-family: 'Cedarville Cursive', cursive;
+    opacity: calc(0.9 - var(--opacity));
+    filter: var(--filter);
+    display: none;
+}
+
+#title {
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+nav#choice-el {
+    box-shadow: inset 0px 11px 9px -15px #000;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 3vh 15px 3vh 15px;
+    background: var(--choice-el_bg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    scroll-behavior: smooth;
+}
+
+nav#choice-el div {
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 1vh;
+    display: inline-block;
+    padding: 3vh;
+    height: 3vh;
+    border-bottom: 1vmin solid transparent;
+}
+
+nav#choice-el div:hover {
+    border-bottom: 1vmin solid #ddd;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1em;
+    transition: 0.6s -webkit-filter ease;
+}
+
+#toggle-dark-mode {
+    float: left;
+    position: relative;
+    padding: 1.5vh;
+}
+
+#choice-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#bookmark {
+    top: 80%;
+    display: none;
+}
+
+#icon-bookmark {
+    position: absolute;
+}
