@@ -1,19 +1,3 @@
-// TEST start
-const TEST_URLS = [
-    { title: "One", "url": "https://litipsum.com/api" },
-    { title: "Two", "url": "https://litipsum.com/api" },
-    { title: "Three", "url": "https://litipsum.com/api" },
-    { title: "Four", "url": "https://litipsum.com/api" }
-];
-// TEST end
-
-// -------------- environment --------------
-const BOOKNAME = 'Unpoken';
-const PROMPT_TEXT = 'Make a choice'
-const VERSION_HINT = 'Hi, ver 1'
-const ERROR_TEXT = 'Content unavailable'
-const CACHE_DURATION_IN_DAYS = -1;
-
 // -------------- UI components --------------
 var bookmark_choice_el = null;
 var bookmark_icon_el = document.getElementById("bookmark");
@@ -40,7 +24,6 @@ function get_content_URLs() {
     // get choice URLs off/online
     return new Promise(async(resolve, reject) => {
         let today = new Date()
-        localStorage.date_expire = null; // TODO
         let exp_date = new Date(localStorage.date_expire)
         if (today <= exp_date) { // fetch cache
             window.choices = JSON.parse(localStorage.choices);
@@ -48,8 +31,8 @@ function get_content_URLs() {
             resolve(true);
         } else {
             // const snapshot = await firebase.firestore().collection("book").get({source: 'server'});
-            const snapshot = TEST_URLS;
-            console.log(`Got data from JSON, size: ${snapshot.length}, listing: `);
+            const snapshot = BOOK_URLS;
+            console.log(`Got data from env.js, size: ${snapshot.length}, listing: `);
 
             if (snapshot.length) {
                 snapshot.forEach((obj, idx) => {
