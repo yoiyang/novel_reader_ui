@@ -8,7 +8,7 @@ Demo: https://unspoken-4578c.firebaseapp.com/
 
 # Specs
 - Languages: HTML, CSS, Vanilla Javascript
-- Unspoken utilize `localStorage` to cache data such as:
+- *Unspoken* utilizes `localStorage` to cache data such as:
   - `choices`: stores all mappings between titles <-> content URLs
   - `darkmode`: if enabled dark mode
   - `date_expire`: the date to refresh `choices` from env.js
