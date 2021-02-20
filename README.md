@@ -1,4 +1,4 @@
-# Unspoken: A book reader website template
+# Unspoken: A book reader website template for mobile browsers
 Demo: https://unspoken-4578c.firebaseapp.com/
 
 # Get started
