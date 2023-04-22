@@ -1,10 +1,10 @@
 // -------------- environment consts --------------
 
 const BOOK_URLS = [
-    { title: "One", "url": "https://litipsum.com/api" },
-    { title: "Two", "url": "https://litipsum.com/api" },
-    { title: "Three", "url": "https://litipsum.com/api" },
-    { title: "Four", "url": "https://litipsum.com/api" }
+    { title: "Chapter One", "url": "https://litipsum.com/api" },
+    { title: "Chapter Two", "url": "https://litipsum.com/api" },
+    { title: "Chapter Three", "url": "https://litipsum.com/api" },
+    { title: "Chapter Four", "url": "https://litipsum.com/api" }
 ];
 
 const BOOKNAME = 'Unpoken';
@@ -14,3 +14,4 @@ const ERROR_TEXT = 'Content unavailable'
 
 // designed to reduce number of queries if BOOK_URLS fetched remotely
 const CACHE_DURATION_IN_DAYS = -1;
+
